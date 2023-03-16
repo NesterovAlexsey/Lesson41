@@ -12,4 +12,7 @@
 //    при попытке создать пиццу с отрицательной массой.
 
 public class Lesson41Main {
+  public static void main(String[] args) {
+
+  }
 }
