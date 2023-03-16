@@ -7,12 +7,11 @@
 //    вида "Вес не может быть отрицательным: [некоректный вес]"
 
 public class Exception extends IllegalArgumentException {
-  Integer num;
+  int num;
 
-  public Exception(Integer num) {
-    this.num = num;
+  public Exception(int num) {
+    super("Вес не может быть отрицательным: [" + num + "]");
   }
-
 
 }
 
