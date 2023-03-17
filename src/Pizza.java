@@ -30,6 +30,7 @@ public class Pizza {
   public static int getMaxWeight() {
     return maxWeight;
   }
+
   //    Добавьте классу Pizza публичный статический метод (сеттер) для изменения этого атрибута.
   public static void setMaxWeight(int maxWeight) {
     Pizza.maxWeight = maxWeight;
