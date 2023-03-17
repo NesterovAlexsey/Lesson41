@@ -1,22 +1,18 @@
-//    При запуске программы PizzaRunner.java должна быть возможность:
-//
-//    запустить программу как раньше, без аргументов, тогда ограничения нет
-//    (Или есть? подсказка: Integer.MAX_VALUE).
-//    запустить программу с одним аргументом командной строки: целым числом.
-//    Тогда именно это целое число и будет максимально возможным весом пиццы (в граммах).
-
 public class Pizza {
 
   private String title;
   private int weight;
 
-  //    Добавьте классу Pizza приватный статический атрибут - максимально возможный вес пиццы.
+  //    Добавьте классу Pizza приватный статический атрибут
+  //    - максимально возможный вес пиццы.
   public static int maxWeight = Integer.MAX_VALUE;
 
   public Pizza(String title, int weight, int maxWeight) {
+
     if (weight < 0) {
       throw new IncorrectWeightException(weight);
     }
+
     this.title = title;
     this.weight = weight;
     this.maxWeight = maxWeight;
@@ -41,7 +37,7 @@ public class Pizza {
 
   @Override
   public String toString() {
-    return "Пицца '" + title + "' весом " + weight + " г";
+    return "Пицца '" + title + "' весом " + weight + " г; Max Weight = " + maxWeight;
   }
 
   @Override
