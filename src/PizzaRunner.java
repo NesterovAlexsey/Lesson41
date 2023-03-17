@@ -1,15 +1,26 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.HashSet;
-import java.util.Set;
-
+//Задача 2* (не обязательно)
+//    Дополните файлы Pizza.java и PizzaRunner.java из классной работы (и задачи № 1).
+//
+//    Добавьте классу Pizza приватный статический атрибут - максимально возможный вес пиццы.
+//
+//    Добавьте классу Pizza публичный статический метод (сеттер) для изменения этого атрибута.
+//
 //    При запуске программы PizzaRunner.java должна быть возможность:
 //
 //    запустить программу как раньше, без аргументов, тогда ограничения нет
 //    (Или есть? подсказка: Integer.MAX_VALUE).
 //    запустить программу с одним аргументом командной строки: целым числом.
 //    Тогда именно это целое число и будет максимально возможным весом пиццы (в граммах).
+
+//    Примечание
+//    Вы также можете проверить параметр командно строки на корректность
+//    и использовать IncorrectWeightException из задачи 1 в случае некорректного запуска программы.
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashSet;
+import java.util.Set;
 
 public class PizzaRunner {
 
@@ -19,6 +30,9 @@ public class PizzaRunner {
 
     for (String argument : args) {
       someWeight = Integer.parseInt(argument);
+      if (someWeight < 0) {
+        throw new IncorrectWeightException(someWeight);
+      }
     }
     return someWeight;
   }
